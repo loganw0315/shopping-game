@@ -27,7 +27,7 @@ function Product(id, name, price, expiryDate) {
 }
 // Complete the dateDiff function
 const dateDiff = (date1, date2) => {
-    let time =  Math.abs(date2 - date1)
+    let time =  Math.abs(date1 - date2)
     return Math.ceil(time/ (1000 * 3600 * 24));
 };
 // Here, use Object.defineProperty to create property - daysToExpire
@@ -385,10 +385,9 @@ function init(data) {
         rateAndExit();
     };
 
-    // Uncomment this function once you fully implement the game to be able to run it
-    // (function setGameCompleteFlag(){
-    //     gameComplete = true;
-    // })();
+    (function setGameCompleteFlag(){
+        gameComplete = true;
+    })();
 
     function main() {
         let products = loadMasterData();
